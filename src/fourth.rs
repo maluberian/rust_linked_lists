@@ -21,7 +21,7 @@ impl<T> List<T> {
                 new_head.borrow_mut().next = Some(old_head);
                 self.head = Some(new_head);
             }
-            Nonw => {
+            None => {
                 self.tail = Some(new_head.clone());
                 self.head = Some(new_head);
             }
